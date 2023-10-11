@@ -2,6 +2,7 @@ const typeDefs = `#graphql
 type Recipe {
     name: String!
     description:String!
+    date:String
     thumbsUp:Int!
     thumbsDown:Int!
 }

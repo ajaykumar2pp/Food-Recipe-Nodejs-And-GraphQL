@@ -1,4 +1,8 @@
 const Recipe = require('./app/Models/recipeSchema')
+var moment = require('moment'); // require
+moment().format(); 
+
+
 const resolvers = {
   Query: {
     // Get All Recipe API
@@ -37,12 +41,15 @@ const resolvers = {
         const newRecipe = new Recipe({
           name: product.name,
           description: product.description,
+          date: moment().format('MMMM Do YYYY, h:mm:ss a'),
+          // date: new Date().toISOString(),
           thumbsUp: product.thumbsUp,
           thumbsDown: product.thumbsDown,
         });
 
         // Save the new Recipe document to the database
         const savedRecipe = await newRecipe.save();
+        console.log(savedRecipe)
 
         return savedRecipe;
       } catch (error) {

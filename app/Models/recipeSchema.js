@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const recipeSchema = new Schema({
  name:{type:String},
  description:{type:String},
- date :{type:Date, default: Date.now()},
+ date :{type:String},
  thumbsUp:{type:Number},
  thumbsDown:{type:Number}
 },{ timestamps:true})
