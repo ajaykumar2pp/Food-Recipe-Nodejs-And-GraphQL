@@ -1,5 +1,6 @@
 const typeDefs = `#graphql
 type Recipe {
+     _id :ID!
     name: String!
     description:String!
     date:String
