@@ -1,9 +1,11 @@
 const typeDefs = `#graphql
 type Recipe {
-     _id :ID!
+     id :ID!
     name: String!
     description:String!
     date:String
+    url:String
+    clicks:Int
     thumbsUp:Int!
     thumbsDown:Int!
 }
@@ -16,6 +18,7 @@ type Recipe {
     addRecipe(product:AddRecipe):Recipe
     updateRecipe(id:ID!,edits:UpdateRecipe):Recipe
     deleteRecipe(id:ID!):[Recipe]
+    visitUrlRecipe(id:ID!):Recipe
   }
 
   input AddRecipe{
@@ -23,11 +26,13 @@ type Recipe {
     description:String!
     thumbsUp:Int!
     thumbsDown:Int!
+    url:String!
   }
 
   input UpdateRecipe{
     name: String!
     description:String!
+    url:String!
     thumbsUp:Int!
     thumbsDown:Int!
   }
