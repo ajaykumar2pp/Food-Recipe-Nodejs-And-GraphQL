@@ -119,7 +119,7 @@ const resolvers = {
         throw new Error(`Could not visit URL recipe: ${error.message}`);
       }
     }
-  }
+  }   
 };
 
 module.exports = { resolvers }
