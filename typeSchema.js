@@ -33,11 +33,11 @@ type Recipe {
   }
 
   input UpdateRecipe{
-    name: String!
-    description:String!
-    url:String!
-    thumbsUp:Int!
-    thumbsDown:Int!
+    name: String
+    description:String
+    url:String
+    thumbsUp:Int
+    thumbsDown:Int
   }
 
 

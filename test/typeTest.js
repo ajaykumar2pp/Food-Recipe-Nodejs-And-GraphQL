@@ -1,16 +1,16 @@
-const typeDefs =`#graphql
+// const typeDefs =`#graphql
 
-type Recipe{
-    title: String
-    price:Int
-}
+// # type Recipe{
+// #     title: String
+// #     price:Int
+// # }
 
-type Query{
-    test : String
-    sayHello(name:String):String
-}
+// # type Query{
+// #     test : String
+// #     sayHello(name:String):String
+// # }
 
 
-`;
+// `;
 
-module.exports ={typeDefs}
+// module.exports ={typeDefs}
