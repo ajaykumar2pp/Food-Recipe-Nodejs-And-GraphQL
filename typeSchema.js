@@ -1,4 +1,5 @@
 const typeDefs = `#graphql
+
 type Recipe {
      id :ID!
     name: String!
@@ -14,11 +15,13 @@ type Recipe {
     recipe(id:ID!):Recipe
   }
 
+
   type Mutation{
     addRecipe(product:AddRecipe):Recipe
     updateRecipe(id:ID!,edits:UpdateRecipe):Recipe
     deleteRecipe(id:ID!):[Recipe]
     visitUrlRecipe(id:ID!):Recipe
+    
   }
 
   input AddRecipe{
